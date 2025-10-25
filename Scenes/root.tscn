@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://c466x3ebvt66a"]
+[gd_scene load_steps=2 format=3 uid="uid://c466x3ebvt66a"]
+
+[ext_resource type="PackedScene" uid="uid://bhqu2rslf10tx" path="res://player.tscn" id="1_i04dx"]
 
 [node name="Main" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.29803923, 0.5882353, 1, 1)
+
+[node name="player" parent="." instance=ExtResource("1_i04dx")]
