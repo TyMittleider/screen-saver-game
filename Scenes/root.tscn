@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://c466x3ebvt66a"]
+[gd_scene load_steps=4 format=3 uid="uid://c466x3ebvt66a"]
 
+[ext_resource type="Script" uid="uid://brh55nshrlm0y" path="res://Scenes/root.gd" id="1_8pvmw"]
 [ext_resource type="PackedScene" uid="uid://bhqu2rslf10tx" path="res://player.tscn" id="1_i04dx"]
+[ext_resource type="PackedScene" uid="uid://i62xnjsqspnb" path="res://Scenes/enemy.tscn" id="2_vnucn"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_8pvmw")
+enemy_scene = ExtResource("2_vnucn")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -13,3 +17,8 @@ grow_vertical = 2
 color = Color(0.29803923, 0.5882353, 1, 1)
 
 [node name="player" parent="." instance=ExtResource("1_i04dx")]
+
+[node name="spawn_timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]

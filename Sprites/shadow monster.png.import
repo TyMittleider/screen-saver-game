@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxwbafwvjftve"
-path="res://.godot/imported/lizard guy 1.png-b9ae0d38dba969147265f32a1336c25c.ctex"
+uid="uid://snc34gkj46p5"
+path="res://.godot/imported/shadow monster.png-0183cb6d6d89404c4476a940e8b94bdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/lizard guy 1.png"
-dest_files=["res://.godot/imported/lizard guy 1.png-b9ae0d38dba969147265f32a1336c25c.ctex"]
+source_file="res://Sprites/shadow monster.png"
+dest_files=["res://.godot/imported/shadow monster.png-0183cb6d6d89404c4476a940e8b94bdd.ctex"]
 
 [params]
 

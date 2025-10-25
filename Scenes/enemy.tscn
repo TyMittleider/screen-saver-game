@@ -1,7 +1,29 @@
-[gd_scene format=3 uid="uid://i62xnjsqspnb"]
+[gd_scene load_steps=5 format=3 uid="uid://i62xnjsqspnb"]
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[ext_resource type="Script" uid="uid://dpwqttou33edm" path="res://Scenes/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://snc34gkj46p5" path="res://Sprites/shadow monster.png" id="1_hghv2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hghv2"]
+radius = 21.023796
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1f0kj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hghv2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="enemy" type="RigidBody2D" groups=["enemies"]]
+gravity_scale = 0.0
+script = ExtResource("1_1f0kj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hghv2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 10)
+sprite_frames = SubResource("SpriteFrames_1f0kj")
