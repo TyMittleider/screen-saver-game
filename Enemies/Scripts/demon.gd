@@ -1,6 +1,7 @@
 extends RigidBody2D
 
-@export var speed = 50
+@onready var stats: EnemyStats = $EnemyStats
+
 var screen_size
 var velocity
 
@@ -10,7 +11,7 @@ func _ready():
 	velocity = Vector2(1,1)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var player = get_tree().root.find_child('player', true, false)
 	var direction = (player.position - position).normalized()
-	apply_force(direction * speed)
+	apply_force(direction * stats.data.speed)

@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://i62xnjsqspnb"]
+[gd_scene load_steps=7 format=3 uid="uid://i62xnjsqspnb"]
 
-[ext_resource type="Script" uid="uid://dpwqttou33edm" path="res://Scenes/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Script" uid="uid://dpwqttou33edm" path="res://Enemies/Scripts/demon.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://snc34gkj46p5" path="res://Sprites/shadow monster.png" id="1_hghv2"]
+[ext_resource type="Script" uid="uid://cfqxamchdw8cl" path="res://Enemies/Scripts/enemy_stats.gd" id="3_fxa6a"]
+[ext_resource type="Resource" uid="uid://3ug0bg63tfft" path="res://Enemies/Data/demon.tres" id="4_uhnm4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hghv2"]
 radius = 21.023796
@@ -17,7 +19,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="enemy" type="RigidBody2D" groups=["enemies"]]
+[node name="Demon" type="RigidBody2D" groups=["enemies"]]
 gravity_scale = 0.0
 script = ExtResource("1_1f0kj")
 metadata/_edit_group_ = true
@@ -28,3 +30,8 @@ shape = SubResource("CircleShape2D_hghv2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 10)
 sprite_frames = SubResource("SpriteFrames_1f0kj")
+
+[node name="EnemyStats" type="Node" parent="."]
+script = ExtResource("3_fxa6a")
+data = ExtResource("4_uhnm4")
+metadata/_custom_type_script = "uid://cfqxamchdw8cl"

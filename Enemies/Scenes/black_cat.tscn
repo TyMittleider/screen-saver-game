@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://fniglsga7hek"]
+[gd_scene load_steps=7 format=3 uid="uid://fniglsga7hek"]
 
 [ext_resource type="Texture2D" uid="uid://rfv1ec1uxe48" path="res://Sprites/black cat 1.png" id="1_5odvm"]
-[ext_resource type="Script" uid="uid://v4dud480x8pm" path="res://Scenes/enemy_2.gd" id="1_g6ed3"]
+[ext_resource type="Script" uid="uid://v4dud480x8pm" path="res://Enemies/Scripts/black_cat.gd" id="1_g6ed3"]
+[ext_resource type="Script" uid="uid://cfqxamchdw8cl" path="res://Enemies/Scripts/enemy_stats.gd" id="3_bbw3f"]
+[ext_resource type="Resource" uid="uid://dwwdk5t8fl2ip" path="res://Enemies/Data/black_cat.tres" id="4_bpljb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g6ed3"]
 radius = 12.0
@@ -18,7 +20,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="enemy2" type="CharacterBody2D"]
+[node name="BlackCat" type="CharacterBody2D"]
 script = ExtResource("1_g6ed3")
 metadata/_edit_group_ = true
 
@@ -28,3 +30,8 @@ shape = SubResource("CapsuleShape2D_g6ed3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_k6nad")
+
+[node name="EnemyStats" type="Node" parent="."]
+script = ExtResource("3_bbw3f")
+data = ExtResource("4_bpljb")
+metadata/_custom_type_script = "uid://cfqxamchdw8cl"

@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://clald8cl8jxx6"]
+[gd_scene load_steps=7 format=3 uid="uid://clald8cl8jxx6"]
 
-[ext_resource type="Script" uid="uid://jykanxi8bdvv" path="res://Scenes/blank_guy.gd" id="1_0ndpa"]
+[ext_resource type="Script" uid="uid://jykanxi8bdvv" path="res://Enemies/Scripts/blank_guy.gd" id="1_0ndpa"]
 [ext_resource type="Texture2D" uid="uid://boixhohlp82xk" path="res://Sprites/blank guy 1.png" id="1_y1nww"]
+[ext_resource type="Script" uid="uid://cfqxamchdw8cl" path="res://Enemies/Scripts/enemy_stats.gd" id="3_ccaik"]
+[ext_resource type="Resource" uid="uid://brgjhc62xdwf5" path="res://Enemies/Data/blank_guy.tres" id="4_mapyq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ndpa"]
 height = 56.0
@@ -31,5 +33,10 @@ sprite_frames = SubResource("SpriteFrames_l0he5")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
+
+[node name="EnemyStats" type="Node" parent="."]
+script = ExtResource("3_ccaik")
+data = ExtResource("4_mapyq")
+metadata/_custom_type_script = "uid://cfqxamchdw8cl"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

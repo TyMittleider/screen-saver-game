@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://brh55nshrlm0y" path="res://Scenes/root.gd" id="1_8pvmw"]
 [ext_resource type="PackedScene" uid="uid://bhqu2rslf10tx" path="res://Scenes/player.tscn" id="1_i04dx"]
-[ext_resource type="PackedScene" uid="uid://i62xnjsqspnb" path="res://Scenes/enemy.tscn" id="2_vnucn"]
-[ext_resource type="PackedScene" uid="uid://fniglsga7hek" path="res://Scenes/enemy2.tscn" id="3_c3mwy"]
-[ext_resource type="PackedScene" uid="uid://clald8cl8jxx6" path="res://Scenes/blank_guy.tscn" id="4_4g5cr"]
+[ext_resource type="PackedScene" uid="uid://i62xnjsqspnb" path="res://Enemies/Scenes/demon.tscn" id="2_vnucn"]
+[ext_resource type="PackedScene" uid="uid://fniglsga7hek" path="res://Enemies/Scenes/black_cat.tscn" id="3_c3mwy"]
+[ext_resource type="PackedScene" uid="uid://clald8cl8jxx6" path="res://Enemies/Scenes/blank_guy.tscn" id="4_4g5cr"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_8pvmw")
