@@ -20,6 +20,7 @@ animations = [{
 [node name="enemy" type="RigidBody2D" groups=["enemies"]]
 gravity_scale = 0.0
 script = ExtResource("1_1f0kj")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_hghv2")

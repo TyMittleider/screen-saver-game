@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://clald8cl8jxx6"]
+
+[ext_resource type="Script" uid="uid://jykanxi8bdvv" path="res://Scenes/blank_guy.gd" id="1_0ndpa"]
+[ext_resource type="Texture2D" uid="uid://boixhohlp82xk" path="res://Sprites/blank guy 1.png" id="1_y1nww"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ndpa"]
+height = 56.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l0he5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y1nww")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="blank_guy" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_0ndpa")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_0ndpa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_l0he5")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
